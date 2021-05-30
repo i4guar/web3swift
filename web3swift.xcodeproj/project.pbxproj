@@ -321,10 +321,10 @@
 		1317BDE9218C526C00D6D095 /* TransactionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTests.swift; sourceTree = "<group>"; };
 		1317BDEA218C526C00D6D095 /* SECP256K1Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SECP256K1Tests.swift; sourceTree = "<group>"; };
 		1317BE22218C8A9E00D6D095 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		1317BE23218C8A9E00D6D095 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.markdown; };
+		1317BE23218C8A9E00D6D095 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		1317BE24218C8A9E00D6D095 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		1317BE26218C8A9F00D6D095 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		1317BE27218C8A9F00D6D095 /* web3swift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = web3swift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1317BE27218C8A9F00D6D095 /* web3swift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = web3swift.podspec; sourceTree = "<group>"; };
 		1324A43A21BED4B800370D3C /* en */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = en; path = en.lproj/README.md; sourceTree = "<group>"; };
 		13397054219984480027E27C /* SecurityToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityToken.swift; sourceTree = "<group>"; };
 		133970562199876A0027E27C /* ERC888.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERC888.swift; sourceTree = "<group>"; };
