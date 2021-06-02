@@ -10,7 +10,7 @@ let package = Package(
     .library(name: "web3swift", targets: ["web3swift"]),
     ],
   dependencies: [
-    .package(url: "https://github.com/attaswift/BigInt.git", from: "3.1.0"),
+    .package(url: "https://github.com/attaswift/BigInt.git", from: "5.2.1"),
     .package(url: "https://github.com/mxcl/PromiseKit.git", from: "6.4.0"),
     ],
   targets: [
