@@ -91,29 +91,27 @@ extension Address {
                 seal.reject(Web3Error.inputError("No 'from' field provided"))
                 return
             }
+            let gasPrice = BigUInt.zero
             var optionsForGasEstimation = Web3Options()
             optionsForGasEstimation.from = options.from
             optionsForGasEstimation.to = options.to
             optionsForGasEstimation.value = options.value
+            optionsForGasEstimation.gasPrice = gasPrice
             let nonce = web3.eth.getTransactionCountPromise(address: from, onBlock: onBlock)
             let gasEstimate = web3.eth.estimateGasPromise(assembledTransaction, options: optionsForGasEstimation, onBlock: onBlock)
-            let gasPrice = web3.eth.getGasPricePromise()
+
             nonce.catch(on: queue) { error in
                 seal.reject(Web3Error.processingError("Failed to fetch nonce"))
             }
             gasEstimate.catch(on: queue) { error in
                 seal.reject(Web3Error.processingError("Failed to fetch gas estimate"))
             }
-            gasPrice.catch(on: queue) { error in
-                seal.reject(Web3Error.processingError("Failed to fetch gas price"))
-            }
             
-            _ = when(fulfilled: nonce,gasEstimate,gasPrice).done(on: queue) { _ in
+            _ = when(fulfilled: nonce, gasEstimate).done(on: queue) { _ in
                 let estimate = Web3Options.smartMergeGasLimit(originalOptions: options, extraOptions: options, gasEstimate: gasEstimate.value!)
                 assembledTransaction.nonce = nonce.value!
                 assembledTransaction.gasLimit = estimate
-                let finalGasPrice = Web3Options.smartMergeGasPrice(originalOptions: options, extraOptions: options, priceEstimate: gasPrice.value!)
-                assembledTransaction.gasPrice = finalGasPrice
+                assembledTransaction.gasPrice = gasPrice
                 seal.fulfill(assembledTransaction)
             }
         }
